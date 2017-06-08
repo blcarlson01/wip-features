@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="tinymce/tinymce.min.js"></script>
+  <script src="tinymce/plugins/contextmenu/plugin.min.js"></script>
+  <script src="tinymce/plugins/link/plugin.min.js"></script>
+  <script src="tinymce/plugins/spellchecker/plugin.min.js"></script>
+  <script src="js/tinymce/plugins/thesaurus/plugin.min.js"></script>
+   <script>
+  tinymce.init({
+    selector: 'div.editable',
+    inline: true,
+    plugins: "link contextmenu spellchecker thesaurus",    
+    contextmenu: "link | thesaurus | spellchecker",
+    browser_spellcheck: true,
+    spellchecker_languages : "+English=en-us",
+    spellchecker_rpc_url: "http://localhost:8080/jspellchecker/jazzy-spellchecker",
+  });
+  </script>
+</head>
+
+<body>
+<h1>TinyMCE Quick Start Guide</h1>
+  <form method="post">
+    <div class="editable">
+    Hello World!
+    </div>
+  </form>
+</body>
+</html>

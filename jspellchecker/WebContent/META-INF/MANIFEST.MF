@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+license: GNU GENERAL PUBLIC LICENSE - Version 2, June 1991
+java: 1.8
+tinymce: 4.2.5
+version: 4.2.5-2015-09-10-1.8
+releases: https://github.com/andreymoser/jspellchecker/tree/master/rel
+ eases
+
