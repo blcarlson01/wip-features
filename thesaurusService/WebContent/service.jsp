@@ -36,8 +36,11 @@ private static List<String> search(String term, HashMap<String, List<String>> wo
 	List<String> result = new ArrayList<String>();	
 	if(!term.isEmpty()){
 		result = wordMap.get(term);
-		result = result.isEmpty() ? wordMap.get(term.toLowerCase()) : result;
+		result = result == null ? wordMap.get(term.toLowerCase()) : result;
 		//TODO: add union with thesaurus
+		
+		// No Results Found Return Empty
+		result = result == null ? new ArrayList<String>() : result;
 	}
 	
 	Integer limit = limitCount == null ? result.size() : Integer.parseInt(limitCount);
